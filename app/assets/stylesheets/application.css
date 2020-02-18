@@ -20,3 +20,15 @@
   width: 400px;
   box-shadow: 1px 1px 1px darkgray;
 }
+
+.completed {
+  display:flex;
+}
+.completed i {
+  padding-top: 3px;
+  margin-left: 8px;
+  size: 16px;
+}
+.completed p {
+  margin-left: 16px;
+}
