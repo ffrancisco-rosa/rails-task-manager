@@ -1,0 +1,18 @@
+<h1>tasks index</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+
+    <li>
+      <% if task.completed == false %>
+          <i class="far fa-square"></i>
+      <% else %>
+          <i class="fas fa-check-square"></i>
+      <% end %>
+      <%= link_to task.title, task_path(task)  %>
+
+    </li>
+
+  <% end %>
+
+</ul>
