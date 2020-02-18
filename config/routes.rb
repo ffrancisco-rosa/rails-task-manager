@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   # show details based on task id
   get 'tasks/:id', to: 'tasks#show', as: 'task'
   patch 'tasks/:id', to: 'tasks#update'
-
+  delete 'tasks/:id', to: 'tasks#destroy'
 end

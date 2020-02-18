@@ -18,11 +18,13 @@
   margin: 0 auto;
   margin-top: 60px;
   width: 400px;
-  box-shadow: 1px 1px 1px darkgray;
+  box-shadow: 1px 1px 3px darkgray;
+  padding: 16px;
 }
 
 .completed {
   display:flex;
+  justify-content: space-between;
 }
 .completed i {
   padding-top: 3px;
@@ -30,5 +32,9 @@
   size: 16px;
 }
 .completed p {
-  margin-left: 16px;
+  margin-left: 20px;
+}
+
+ul li {
+  list-style: none;
 }

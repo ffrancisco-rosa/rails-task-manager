@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-
   def index
     @tasks = Task.all
   end
@@ -8,7 +7,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-# os proximos 2 são relativos ao acto de criar task
+  # os proximos 2 são relativos ao acto de criar task
   def new
     @task = Task.new
   end
@@ -19,7 +18,7 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-# os proximos 2 são relativos ao acto de editar task
+  # os proximos 2 são relativos ao acto de editar task
 
   def edit
     @task = Task.find(params[:id])
@@ -30,8 +29,11 @@ class TasksController < ApplicationController
      @task.update(check_params_update)
      redirect_to tasks_path
   end
-
+  # -------------------------------------------------------------
   def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path
   end
 
   private

@@ -1,4 +1,4 @@
-<h1>tasks index</h1>
+<h1>Tasks List</h1>
 
 <%= link_to 'Add new task', new_task_path %>
 
@@ -11,8 +11,12 @@
       <% else %>
           <i class="fas fa-check-square"></i>
       <% end %>
+
       <%= link_to task.title, task_path(task)  %>
 
+      <%= link_to task_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end  %>
     </li>
 
   <% end %>

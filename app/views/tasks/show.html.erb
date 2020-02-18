@@ -1,18 +1,25 @@
-<h1>task details</h1>
 
+<div class="d-inline-flex">
+  <div>
+    <h1>Task Info</h1>
+  </div>
   <div>
     <%= link_to 'Edit task', edit_task_path %>
   </div>
-
+</div>
     <h2> <%= @task.title %></h2>
     <p> <%= @task.details %></p>
-
-  <div class="completed">
-   <% if @task.completed == false %>
-     <i class="far fa-square"></i> <p>This task is not completed yet!</p></div>
-    <% else %>
   <div>
-    <i class="fas fa-check-square"></i> <p>Task is completed!</p>
+    <div class="completed">
+     <% if @task.completed == false %>
+       <i class="far fa-square"></i> <p>This task is not completed yet!</p></div>
+      <% else %>
+    <div>
+      <i class="fas fa-check-square"></i> <p>Task is completed!</p>
+      <% end %>
+    </div>
   </div>
-    <% end %>
+  <div>
+    <%= link_to 'Tasks Index', tasks_path %>
+  </div>
 
